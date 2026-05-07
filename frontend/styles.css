@@ -24,4 +24,15 @@
 .footer .legal {
   font-size: 13px;
   opacity: 0.75;
+}.author-top{
+  font-size:13px;
+  font-weight:700;
+  color:#7c3aed;
+  margin-top:2px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }

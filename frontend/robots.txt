@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://combopdf.netlify.app/sitemap.xml

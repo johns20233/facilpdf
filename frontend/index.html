@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FácilPDF - Convertir, unir y comprimir PDF</title>
+  <meta name="description" content="Convierte JPG a PDF, une PDF e imágenes y comprime documentos a 1 MB gratis." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">PDF</div><span>FácilPDF</span></div>
+    <nav>
+      <a href="#tools" data-i18n="tools">Herramientas</a>
+      <a href="#pricing" data-i18n="pricing">Gratis / Premium</a>
+      <select id="lang">
+        <option value="es">🇪🇸 Español</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="pt">🇵🇹 Português</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="heroText">
+        <p class="badge" data-i18n="badge">PDF online gratis</p>
+        <h1 data-i18n="title">Convierte, une y comprime documentos en segundos</h1>
+        <p class="subtitle" data-i18n="subtitle">Funciona en PC, tablet, Android y iPhone. Ideal para páginas que piden archivos de máximo 1 MB.</p>
+        <div class="rating">★★★★★ <span>4.9 / 5</span></div>
+      </div>
+      <div class="heroCard">⬆️<strong>PDF</strong><span>JPG · PNG · PDF</span></div>
+    </section>
+
+    <section class="workspace" id="tools">
+      <div class="panel mainPanel">
+        <label class="dropzone" for="files">
+          <input id="files" type="file" accept=".jpg,.jpeg,.png,.pdf" multiple />
+          <div class="uploadIcon">☁️</div>
+          <h2 data-i18n="uploadTitle">Selecciona tus archivos</h2>
+          <p data-i18n="uploadText">JPG, PNG o PDF · Máximo recomendado 50 MB por archivo</p>
+        </label>
+
+        <div class="fileHeader">
+          <h3 data-i18n="loaded">Archivos cargados</h3>
+          <button id="clearBtn" class="linkBtn" data-i18n="clear">Limpiar todo</button>
+        </div>
+        <div id="fileList" class="fileList"><p class="muted" data-i18n="empty">Todavía no hay archivos cargados.</p></div>
+
+        <div class="actions">
+          <button data-mode="jpg_pdf" class="toolBtn">🖼️ <span data-i18n="jpgPdf">JPG a PDF</span></button>
+          <button data-mode="merge_pdf" class="toolBtn">📄 <span data-i18n="mergePdf">Unir PDFs</span></button>
+          <button data-mode="merge_all" class="toolBtn">🧩 <span data-i18n="mergeAll">Unir PDF + JPG</span></button>
+          <button data-mode="compress_1mb" class="toolBtn premium">⚡ <span data-i18n="compress">Comprimir a 1 MB</span></button>
+        </div>
+
+        <button id="processBtn" class="primary" data-i18n="process">Procesar archivos</button>
+        <div id="result" class="result"></div>
+      </div>
+
+      <aside class="side">
+        <div class="panel subscribe">
+          <h2 data-i18n="subscribeTitle">Únete gratis a FácilPDF</h2>
+          <p data-i18n="subscribeText">Suscríbete gratis para usar las herramientas.</p>
+          <input id="email" type="email" placeholder="Tu correo electrónico" />
+          <button id="subscribeBtn" class="primary small" data-i18n="subscribeBtn">Suscribirme gratis</button>
+          <ul>
+            <li data-i18n="b1">Acceso a todas las herramientas</li>
+            <li data-i18n="b2">Plan gratuito y opción premium</li>
+            <li data-i18n="b3">Archivos procesados con seguridad</li>
+          </ul>
+        </div>
+
+        <div class="panel" id="pricing">
+          <h2 data-i18n="plans">Planes</h2>
+          <div class="plans">
+            <div><strong>Gratis</strong><span>PDF básico</span></div>
+            <div><strong>Premium</strong><span data-i18n="premiumText">Más peso, OCR y sin anuncios</span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,6 +1,10 @@
 const dropzone = document.getElementById("dropzone");
 const processBtn = document.getElementById("processBtn");
-const fileList = document.getElementById("fileList");
+const fileList =
+  document.getElementById("fileList") ||
+  document.getElementById("filelist") ||
+  document.querySelector(".fileList") ||
+  document.querySelector(".filelist");
 
 let selectedFiles = [];
 
@@ -35,7 +39,10 @@ dropzone.addEventListener("drop", (e) => {
 });
 
 function showFiles() {
-  if (!fileList) return;
+  if (!fileList) {
+  alert("No encontré el contenedor de archivos en index.html");
+  return;
+}
 
   if (selectedFiles.length === 0) {
     fileList.innerHTML = "Todavía no hay archivos cargados.";
